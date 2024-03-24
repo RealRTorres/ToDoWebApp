@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>To Do Application</title>
+</head>
+
+<body>
+    <h1>Add your task</h1>
+        <form name="toDo" action="addTask.jsp" method="post">
+            <table>
+                <tbody>
+                <tr>
+                    <td>Task: </td>
+                    <td><input type="text" name="task" value="" size="50"/></td>
+                </tr>
+                </tbody>
+            </table>
+            <input type="reset" value="Clear" name="clear"/>
+            <input type="submit" value="Add" name="Add"/>
+        </form>
+    <h1>Delete your task</h1>
+    <form name="toDo" action="deleteTask.jsp" method="post">
+        <table>
+            <tbody>
+            <tr>
+                <td>Task: </td>
+                <td><input type="text" name="task" value="" size="50"/></td>
+            </tr>
+            </tbody>
+        </table>
+        <input type="reset" value="Clear" name="clear"/>
+        <input type="submit" value="Delete" name="Delete"/>
+    </form>
+    <h1>View your tasks</h1>
+    <form name="toDo" action="viewTasks.bak" method="post">
+        <input type="submit" value="View" name="View"/>
+    </form>
+</body>
+</html>
