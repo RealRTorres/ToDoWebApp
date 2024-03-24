@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import dao.TaskDao;
+import service.Utils;
 
 @WebServlet("/")
 public class WebAppServlet extends HttpServlet {
@@ -66,13 +67,15 @@ public class WebAppServlet extends HttpServlet {
         String name = request.getParameter("name");
         Task newUser = new Task(name);
         dao.insertTask(newUser);
-        response.sendRedirect("/todowebapp/added");
+        response.sendRedirect("added");
     }
 
     private void deleteTask(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        dao.deleteTask(id);
-        System.out.println("id=" + id);
+        Boolean isDeleted = dao.deleteTask(id);
+        if (isDeleted) {
+            Utils.logInfo("id:" + id + " was deleted.");
+        }
         response.sendRedirect("list");
     }
 }
