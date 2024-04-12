@@ -53,7 +53,7 @@
                                                     name="name" required="required">
                     </fieldset>
 
-                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="submit" class="btn btn-success" name="add" value="add">Add</button>
                 </form>
         </div>
     </div>

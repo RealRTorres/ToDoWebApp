@@ -9,10 +9,12 @@ public class Task implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
-    private int id;
+    //private int id;
+    public int id;
     @Basic
     @Column(name = "name")
-    private String name;
+    public String name;
+    //private String name;
 
     public Task(int id, String name) {
         this.id = id;

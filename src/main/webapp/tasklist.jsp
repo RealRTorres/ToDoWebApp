@@ -48,6 +48,7 @@
                 <tr>
                     <td><c:out value="${task.id}"/></td>
                     <td><c:out value="${task.name}"/></td>
+                    <td><a href="<%=request.getContextPath()%>/edit?id=<c:out value='${task.id}' />">Fetch</a></td>
                     <td><a href="<%=request.getContextPath()%>/delete?id=<c:out value='${task.id}' />">Delete</a></td>
                 </tr>
             </c:forEach>
@@ -57,5 +58,6 @@
         </table>
     </div>
 </div>
+<pre> '${injected}' </pre>
 </body>
 </html>
